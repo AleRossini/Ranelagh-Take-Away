@@ -19,16 +19,29 @@ input {
   display: none;
   }
 
-/* NAVIGATION BAR */
+/* navigation bar */
 
 #navigation_bar {
-  font-size: 18px
+  font-size: 18px;
+  background-color: #FFFFFF;
+}
+@media (min-height: 300px) {
+  #navigation_bar {
+    position: sticky;
+    top: 0;
+  }
 }
 
-/* SLIDER */
+/* slider */
 #slider {
-  height: 200px;
+  height: 800px;
   background-color: tomato;
+}
+
+/* combos */
+#combos {
+  height: 800px;
+  background-color: yellow;
 }
 
 /* MOBILE */
@@ -74,6 +87,9 @@ nav a {
   .wrapper {
     flex-wrap: nowrap;
   }
+  #navigation_bar {
+    height: 80px;
+  }
   #navigation_bar label {
     display: none;
   }
@@ -87,6 +103,7 @@ nav a {
   }
   #brand {
     order: 2;
+    margin-top: 45px;
   }
   #nav2 {
     order: 3;
