@@ -6,6 +6,26 @@ body {
   color: #1e1e1e;
 }
 
+/* mask */
+.mask {
+	left: -50%;
+	margin: 0 auto;
+	overflow: hidden;
+	position:relative;
+	width: 200%;
+  background-color: #FFF;
+  height: 100%;
+}
+
+.maskBottom {
+  	border-radius: 0 0 300% 300%;
+  }
+
+.maskTop {
+  border-radius: 300% 300% 0 0;
+}
+
+
 /* RESPONSIVE STRUCTURE */
 .wrapper {
   display: -webkit-box;
@@ -28,6 +48,7 @@ input {
 #navigation_bar {
   font-size: 18px;
   background-color: #FFFFFF;
+  z-index: 999;
 }
 #navigation_bar, #logo img {
   /*max-height: 200px;*/
@@ -45,18 +66,36 @@ input {
 }
 
 /* slider */
-#slider {
-  height: 800px;
-  background-color: tomato;
-  overflow:hidden;
-}
-
-#slider ul {}
 
 /* combos */
 #combos {
   height: 800px;
-  background-color: yellow;
+  overflow: hidden;
+}
+
+/* reviews */
+#reviews {
+  background-color: #1e1e1e;
+  height: 400px;
+  margin-top: -55px;
+}
+
+/* maps */
+
+#map {
+  height: 800px;
+  overflow: hidden;
+  margin-top: -55px;
+}
+.mapouter{
+  text-align:center;
+  height:100%;
+  width:100%;
+}
+.gmap_canvas {
+  overflow:hidden;
+  height:inherit;
+  width:inherit;
 }
 
 /* MOBILE */
