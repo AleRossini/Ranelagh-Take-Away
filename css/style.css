@@ -1,4 +1,7 @@
 /*GENERAL*/
+html {
+  scroll-behavior: smooth;
+}
 body {
   color: #1e1e1e;
 }
@@ -46,10 +49,6 @@ input {
 
 /* MOBILE */
 
-#navigation_bar label {
-  margin: 50px;
-  position: absolute;
-}
 #brand {
   align-self: center;
   justify-content: center;
@@ -73,6 +72,19 @@ input {
 nav a {
   opacity: 0;
   transition: opacity 0.4s linear;
+}
+#navigation_bar label {
+  margin: 40px;
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 30px;
+}
+#navigation_bar input[type="checkbox"] + label::before {
+content: "\f0c9";
+}
+#navigation_bar input[type="checkbox"]:checked + label::before {
+content: "\f00d";
 }
 #navigation_bar input[type="checkbox"]:checked ~ #nav1, #navigation_bar input[type="checkbox"]:checked ~ #nav2 {
   max-height: 100px;
