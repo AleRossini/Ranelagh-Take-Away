@@ -25,7 +25,13 @@ input {
   font-size: 18px
 }
 
-/* MOBILE FIRST */
+/* SLIDER */
+#slider {
+  height: 200px;
+  background-color: tomato;
+}
+
+/* MOBILE */
 
 #navigation_bar label {
   margin: 50px;
@@ -34,32 +40,32 @@ input {
 #brand {
   align-self: center;
   justify-content: center;
-  display: flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
+  display: inherit;
   flex-grow: 1;
 }
 #nav1, #nav2 {
-  /*background-color: #f7fdfe;*/
-  display: none;
+  overflow: hidden;
+  max-height: 0;
   flex-direction: column;
   width: 100%;
   text-align: center;
+  display: inherit;
 }
-#logo {
-  width: 100px;
+#nav1 {
+  transition: max-height 0.5s ease-in-out;
 }
-
-#navigation_bar input[type="checkbox"]:checked ~ nav {
-  display: flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
+#nav2 {
+  transition: max-height 0.7s ease-in-out;
+}
+nav a {
+  opacity: 0;
+  transition: opacity 0.4s linear;
+}
+#navigation_bar input[type="checkbox"]:checked ~ #nav1, #navigation_bar input[type="checkbox"]:checked ~ #nav2 {
+  max-height: 100px;
+}
+#navigation_bar input[type="checkbox"]:checked ~ nav a {
+  opacity: 1;
 }
 
 /* TABLETS, LAPTOPS */
@@ -74,6 +80,7 @@ input {
   #nav1, #nav2 {
     display: inline-block;
     align-self: center;
+    max-height: 100px;
   }
   #nav1 {
     order: 1;
@@ -83,5 +90,8 @@ input {
   }
   #nav2 {
     order: 3;
+  }
+  nav a {
+    opacity: 1;
   }
 }
