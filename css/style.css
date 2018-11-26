@@ -5,6 +5,7 @@ html {
 body {
   color: #1e1e1e;
 }
+
 /* RESPONSIVE STRUCTURE */
 .wrapper {
   display: -webkit-box;
@@ -28,6 +29,14 @@ input {
   font-size: 18px;
   background-color: #FFFFFF;
 }
+#navigation_bar, #logo img {
+  /*max-height: 200px;*/
+  transition: max-height 0.3s ease-in-out;
+}
+.shrink {
+  max-height: 60px;
+}
+
 @media (min-height: 300px) {
   #navigation_bar {
     position: sticky;
@@ -39,7 +48,10 @@ input {
 #slider {
   height: 800px;
   background-color: tomato;
+  overflow:hidden;
 }
+
+#slider ul {}
 
 /* combos */
 #combos {
@@ -62,6 +74,7 @@ input {
   width: 100%;
   text-align: center;
   display: inherit;
+  background-color: #FFFFFF;
 }
 #nav1 {
   transition: max-height 0.5s ease-in-out;
@@ -74,11 +87,15 @@ nav a {
   transition: opacity 0.4s linear;
 }
 #navigation_bar label {
-  margin: 40px;
+  margin: 40px 40px;
   position: absolute;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 30px;
+  transition: margin 0.2s ease-in-out;
+}
+.changeMargin {
+  margin:15px 40px;
 }
 #navigation_bar input[type="checkbox"] + label::before {
 content: "\f0c9";
