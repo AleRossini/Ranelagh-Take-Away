@@ -30,25 +30,38 @@
           </nav>
           <nav id="nav2">
             <a href="#menu">MENU</a>
-            <a href="#orderonline">ORDER ONLINE</a>
+            <a href="https://deliveroo.ie/" target="_blank">ORDER ONLINE</a>
           </nav>
         </div>
       </section>
       <section id="slider">
-        <ul>
-          <li class="a">Slide 1</li>
-          <li class="b">Slide 2</li>
-          <li class="c">Slide 3</li>
-          <li class="d">Slide 4</li>
-        </ul>
-        <a href="#0" class="next control">Next</a>
-        <a href="#0" class="prev control">Prev</a>
+        <div class="slide">
+            <a href="#"><img class="fadeInRight animated" src="img/fish&chips_1800.jpg"></a>
+            <div class="wrapper fakeAbs">
+              <div class="adv">
+                <h1>Fish and chips</h1>
+                <p>Delicious Cod Fish and Cripsy Fries</p>
+                <a href="https://deliveroo.ie/" type="button" target="_blank">BUY IT</a>
+              </div>
+            </div>
+        </div>
+        <div class="slide">
+          <a href="#"><img class="fade" src="img/fish&chips_journal_1800.jpg"></a>
+        </div>
+        <div class="slide2 slide fade">
+        </div>
+        <a href="#0" class="prev" onclick="moveSlide(-1)"></a>
+        <a href="#0" class="next" onclick="moveSlide(1)"></a>
+        <div class="wrapper">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
       </section>
 
       <section id="combos">
         <div class="mask maskBottom">
           <div class="wrapper">
-            prova
           </div>
         </div>
       </section>
@@ -75,6 +88,32 @@
                $("#navigation_bar label").css("margin","40px");
 		       }*/
 	    });
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function moveSlide(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var slides = document.getElementsByClassName("slide");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+}
 
       </script>
     </body>
