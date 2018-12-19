@@ -9,6 +9,7 @@
       <!-- Custom CSS -->
       <link rel="stylesheet" type="text/css" href="css/style.css" charset="utf-8">
       <!-- Custom Font -->
+      <link href="https://fonts.googleapis.com/css?family=Anton|Leckerli+One" rel="stylesheet">
       <!---->
       <!-- Icons -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -17,55 +18,127 @@
     </head>
     <body>
       <section id="navigation_bar">
-        <div class="wrapper">
+        <div class="wrapper flex flex_row">
           <input type="checkbox" name="menu" id="show_menu">
           <label for="show_menu"></label>
-          <div id="brand">
-            <a id="logo" href="#"><img src="img/logo.png" alt="Ranelagh Take Away logo"></img></a>
+          <div id="brand" class="justify_center">
+            <a id="logo" href="#"><img src="img/logo_def.png" alt="Ranelagh Take Away logo"></img></a>
           </div>
           <nav id="nav1">
             <a href="#">HOME</a>
-            <a href="#about">ABOUT</a>
+            <!-- <a href="#about">ABOUT</a> -->
             <a href="#map">CONTACT</a>
           </nav>
           <nav id="nav2">
             <a href="#menu">MENU</a>
-            <a href="https://deliveroo.ie/" target="_blank">ORDER ONLINE</a>
+            <a id="order_online" href="https://deliveroo.ie/" target="_blank">ORDER ONLINE</a>
           </nav>
         </div>
       </section>
       <section id="slider">
         <div class="slide">
-            <a href="#"><img class="fadeInRight animated" src="img/fish&chips_1800.jpg"></a>
-            <div class="wrapper fakeAbs">
-              <div class="adv">
-                <h1>Fish and chips</h1>
+            <div class="wrapper flex justify_center">
+              <div class="adv flex_column">
+                <h1>FISH AND CHIPS</h1>
                 <p>Delicious Cod Fish and Cripsy Fries</p>
-                <a href="https://deliveroo.ie/" type="button" target="_blank">BUY IT</a>
+                <a class="fish" href="https://deliveroo.ie/" type="button" target="_blank">BUY IT</a>
               </div>
             </div>
+            <img class="fade" src="img/fish&chips_1800.jpg">
         </div>
         <div class="slide">
-          <a href="#"><img class="fade" src="img/fish&chips_journal_1800.jpg"></a>
+          <div class="wrapper flex justify_center">
+            <div class="adv flex_column">
+              <h1>DONER KEBAB</h1>
+              <p>Oriental taste for a yummy dinner!</p>
+              <a class="meat" href="https://deliveroo.ie/" type="button" target="_blank">BUY IT</a>
+            </div>
+          </div>
+          <img class="fade" src="img/kebab3.jpg">
         </div>
-        <div class="slide2 slide fade">
+        <div class="slide">
+          <div class="wrapper flex justify_center">
+            <div class="adv flex_column">
+              <h1>BEST FRIES!</h1>
+              <p>A huge selection of your favourite fries</p>
+              <a class="meat" href="https://deliveroo.ie/" type="button" target="_blank">BUY IT</a>
+            </div>
+          </div>
+          <img class="fade" src="img/fries.jpg">
         </div>
         <a href="#0" class="prev" onclick="moveSlide(-1)"></a>
         <a href="#0" class="next" onclick="moveSlide(1)"></a>
-        <div class="wrapper">
+        <!-- <div class="wrapper">
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
+        </div> -->
       </section>
 
       <section id="combos">
-        <div class="mask maskBottom">
-          <div class="wrapper">
+        <!-- <div class="mask maskBottom"> -->
+          <div class="combos_title">
+            <div class="wrapper flex flex_row justify_center">
+                <h2><span>THE</span> COMBOS</h2>
+            </div>
           </div>
-        </div>
+          <div class="wrapper flex flex_row justify_center">
+            <div class="food_thumb dashed_border_bottom dashed_border_right">
+              <figure>
+                <h3>SEA SAVOR</h3>
+                <img src="img/sea_savour.jpg" alt="">
+                <figcaption class="fish">Fresh cod fillet, fried in a crispy breadcrum coat
+                  <br />+ Thick fries
+                  <br />+ Can of 33cl
+                  <span class="price">€9.90</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="food_thumb dashed_border_bottom">
+              <figure>
+                <h3>LAZY DINNER</h3>
+                <img src="img/sea_savour.jpg" alt="">
+                <figcaption class="meat">Fresh cod fillet, fried in a crispy breadcrum coat
+                  <br />+ Thick fries
+                  <br />+ Can of 33cl
+                  <span class="price">€9.90</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="food_thumb dashed_border_bottom dashed_border_right third">
+              <figure>
+                <h3>ORIENTAL TASTE</h3>
+                <img src="img/sea_savour.jpg" alt="">
+                <figcaption class="meat">Fresh cod fillet, fried in a crispy breadcrum coat
+                  <br />+ Thick fries
+                  <br />+ Can of 33cl
+                  <span class="price">€9.90</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="food_thumb">
+              <figure>
+                <h3>SEA SAVOR</h3>
+                <img src="img/sea_savour.jpg" alt="">
+                <figcaption class="meat">Fresh cod fillet, fried in a crispy breadcrum coat
+                  <br />+ Thick fries
+                  <br />+ Can of 33cl
+                  <span class="price">€9.90</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- </div> -->
       </section>
       <section id="reviews">
+        <div class="wrapper flex flex_row justify_center align_center">
+          <h2>They say of our food..</h2>
+          <div class="flex flex_row nowrap align_center">
+            <span class="quote"><i class="fas fa-quote-left"></i></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+            <span class="quote"><i class="fas fa-quote-right"></i></span>
+          </div>
+        </div>
       </section>
       <section id="map">
         <div class="mask maskTop">
@@ -76,6 +149,62 @@
           </div>
         </div>
       </section>
+      <section id="time">
+        <div class="wrapper flex flex_row justify_evenly">
+          <div>
+            <h5 class="margin_basic">ADDRESS</h5>
+            <p class="margin_basic">Fields Terrace
+              <br />8, Charleston Rd
+              <br />The Triangle, Dublin 6
+            </p>
+            <h5 class="margin_basic">TELEPHONE NUMBER</h5>
+            <p class="margin_basic">(01) 497 6521</p>
+          </div>
+          <div>
+            <h5 class="margin_basic margin_bottom_none">OPENING TIME</h5>
+            <div class="flex margin_basic">
+            <ul>
+              <li>Monday</li>
+              <li>Tuesday</li>
+              <li>Wednesday</li>
+              <li>Thursday</li>
+              <li>Friday</li>
+              <li>Saturday</li>
+              <li>Sunday</li>
+            </ul>
+            <ul class="text_bold">
+              <li>17:00 - 1:00</li>
+              <li>17:00 - 1:00</li>
+              <li>17:00 - 1:00</li>
+              <li>17:00 - 1:00</li>
+              <li>17:00 - 1:00</li>
+              <li>17:00 - 1:00</li>
+              <li>17:00 - 1:00</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section id="social">
+        <div class="wrapper flex flex_column align_center dashed_border_bottom">
+          <p>Follow us</p>
+          <div class="margin_basic margin_top_none">
+            <a id="facebook" class="social_btn" href="https://www.facebook.com/">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a id="insta" class="social_btn" href="https://www.instagram.com/?hl=it">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="wrapper flex flex_row justify_evenly">
+          <p><a href="#">Allergens</a> | <a href="#">Privacy policy</a></p>
+          <p><i class="far fa-copyright"></i>Ranelagh Takeaway - All right reserve</p>
+        </div>
+      </footer>
+
       <script>
 
       $(document).on("scroll", function(){
