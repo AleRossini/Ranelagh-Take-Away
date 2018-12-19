@@ -5,51 +5,34 @@ html {
 body {
   color: #1e1e1e;
   font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Anton', sans-serif;
-  /* text-transform: uppercase; */
+}
+h2 {
+  font-size: 50px;
+}
+h3{
+  font-size: 25px;
 }
 
 p {
   margin: 10px;
 }
 
-a:hover {
-  color: grey;
+img {
+  object-fit: cover;
 }
 
-.flex {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+ul {
+  padding-right: 15px;
 }
-.wrap {
-  flex-wrap: wrap;
-}
-.nowrap {
-  flex-wrap: nowrap;
-}
-.flex_column {
-  flex-direction: column;
-}
-.flex_row {
-  flex-direction: row;
-}
-.justify_center {
-  justify-content: center;
-}
-.justify_space_between {
-  justify-content: space-between;
-}
-.justify_evenly {
-    justify-content: space-evenly;
-}
-.align_center {
-  align-items: center;
+
+a:hover {
+  color: grey;
 }
 .text_bold {
   font-weight: bold;
@@ -66,35 +49,76 @@ a:hover {
 .margin_top_none {
   margin-top: 0;
 }
-
-/* responsive structure */
-.wrapper {
-  margin: auto;
-  flex-wrap: wrap;
-  height: inherit;
-  max-width: 960px;
+.fish {
+  color: #0d70b2;
+}
+.fish_neg {
+  background-color: #0d70b2;
+}
+.meat {
+  color:#b20604;
+}
+.meat_neg {
+  background-color: #b20604;
 }
 input {
   display: none;
   }
 
+  /* responsive structure */
+  .flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .wrap {
+    flex-wrap: wrap;
+  }
+  .nowrap {
+    flex-wrap: nowrap;
+  }
+  .flex_column {
+    flex-direction: column;
+  }
+  .flex_row {
+    flex-direction: row;
+  }
+  .justify_center {
+    justify-content: center;
+  }
+  .justify_around {
+      justify-content: space-around;
+  }
+  .align_center {
+    align-items: center;
+  }
+  .wrapper {
+    margin: auto;
+    height: inherit;
+    max-width: 960px;
+  }
+
 /* mask */
 .mask {
-	left: -50%;
 	margin: 0 auto;
 	overflow: hidden;
 	position:relative;
-	width: 200%;
   background-color: #FFF;
-  height: 100%;
 }
 
 .maskBottom {
-  	border-radius: 0 0 300% 300%;
+    border-radius: 0 0 300% 300%;
+    height: 96px;
+    margin-bottom: -45px;
   }
 
 .maskTop {
   border-radius: 300% 300% 0 0;
+  height: 100%;
+	width: 200%;
+  left: -50%;
 }
 
 /* navigation bar */
@@ -104,10 +128,6 @@ input {
   background-color: #FFFFFF;
   z-index: 999;
   font-family: 'Anton', sans-serif;
-}
-#navigation_bar, #logo img {
-  /* max-height: 200px; */
-  /* transition: max-height 0.3s ease-in-out; */
 }
 
 nav a {
@@ -149,25 +169,26 @@ nav a:hover, nav a:active {
   overflow: hidden;
 }
 
-#slider img {
-  object-fit:cover;
-}
-
 /* Bullets indicators count */
+
+#slider_count {
+  z-index: 99;
+  top: 600px;
+  position: absolute;
+}
 
 .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 5px;
-  background-color: #717171;
+  background-color: rgba(30,30,30, 0.7);
   border-radius: 50%;
   transition: all 0.6s ease;
-  /* margin-top: -45px; */
 }
 
 .active, .dot:hover {
-  background-color: #bbb;
+  background-color: #FFF;
 }
 
 /* Next & previous buttons */
@@ -210,12 +231,11 @@ nav a:hover, nav a:active {
   background-color: rgba(250,250,250,0.7);
   border-radius: 60px;
   padding: 40px 80px;
-    z-index: 1;
-    text-align: center;
-    display: inherit;
-    text-align: center;
-    position: absolute;
-    top: 40%;
+  z-index: 1;
+  text-align: center;
+  display: inherit;
+  position: absolute;
+  top: 40%;
 }
 
 .adv h1, .adv p {
@@ -241,10 +261,10 @@ nav a:hover, nav a:active {
   background: transparent;
 }
 
-a.fish:hover {
+a.fish_neg:hover {
   border-color: #0d70b2;
 }
-a.meat:hover {
+a.meat_neg:hover {
   border-color: #b20604;
 }
 
@@ -271,62 +291,52 @@ a.meat:hover {
 #combos {
   overflow: hidden;
 }
-#combos .wrapper {
-  flex-wrap: wrap;
-}
 .combos_title {
   background-color: #ffd339;
   padding: 35px 0;
-}
-.combos_title h2 {
-  font-size: 55px;
-  align-items: center;
-  display: inherit;
 }
 .combos_title h2 span {
   font-size: 30px;
 }
 #combos .food_thumb {
   padding: 40px 50px;
-  line-height: 1.2;
+  width: 325px;
 }
 #combos .food_thumb img {
   width: 100%;
+  height: 200px;
 }
 #combos figcaption {
   color: white;
   padding: 20px 15px;
-  margin-top: -4px;
-}
-.fish {
-  background-color: #0d70b2;
-}
-.meat {
-  background-color: #b20604;
+  margin-top: -5px;
+  font-size: 14px;
 }
 #combos figure span {
   float: right;
+}
+#combos .price {
+  font-size: 28px;
+  font-weight: bold;
 }
 
 /* reviews */
 #reviews {
   background-color: #1e1e1e;
-  height: 400px;
+  height: 450px;
   color: white;
-  padding: 50px;
+  padding: 70px 40px;
 }
 #reviews h2 {
   font-family: 'Leckerli One', cursive;
-  font-size: 48px;
   margin-bottom: 30px;
 }
-
 
 /* maps */
 
 #map {
   overflow: hidden;
-  margin-top: -55px;
+  margin-top: -45px;
 }
 .mapouter{
   text-align:center;
@@ -372,20 +382,24 @@ border-radius: 50%;
   background-color: grey;
 }
 
-/* #facebook {
-  content: '\f39e';
+/* footer */
+
+footer p {
+  margin: 20px 0;
+  text-align: center;
 }
 
-#insta {
-  content: '\f16d';
-} */
 
 /* MOBILE */
 
 #brand {
-  align-self: center;
   display: inherit;
   flex-grow: 1;
+  margin-bottom: -3px;
+}
+#navigation_bar, #logo img {
+  height: 90px;
+  transition: height 0.2s linear;
 }
 #nav1, #nav2 {
   overflow: hidden;
@@ -393,7 +407,6 @@ border-radius: 50%;
   flex-direction: column;
   width: 100%;
   text-align: center;
-  display: inherit;
   background-color: #FFFFFF;
 }
 #nav1 {
@@ -412,7 +425,7 @@ nav a {
     justify-content: start;
 }
 #navigation_bar label {
-  margin: 40px 40px;
+  margin: 31px 40px;
   position: absolute;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -420,10 +433,10 @@ nav a {
   transition: margin 0.2s ease-in-out;
 }
 .changeMargin {
-  margin:15px 40px;
+  margin: 20px 40px !important;
 }
-.shrink {
-  max-height: 80px;
+.shrink, .shrink_logo {
+  height: 70px !important;
 }
 #navigation_bar input[type="checkbox"] + label::before {
 content: "\f0c9";
@@ -431,12 +444,21 @@ content: "\f0c9";
 #navigation_bar input[type="checkbox"]:checked + label::before {
 content: "\f00d";
 }
-
 #navigation_bar input[type="checkbox"]:checked ~ #nav1, #navigation_bar input[type="checkbox"]:checked ~ #nav2 {
   max-height: 110px;
 }
+#navigation_bar input[type="checkbox"]:checked ~ #nav2{
+  padding-bottom: 15px;
+}
 #navigation_bar input[type="checkbox"]:checked ~ nav a {
   opacity: 1;
+}
+/* slider */
+#slider img {
+  margin-left: -50%;
+}
+#slider_count {
+  left:39%;
 }
 /* combos */
 .dashed_border_bottom {
@@ -445,36 +467,43 @@ content: "\f00d";
 .dashed_border_right {
   border-right: 0;
 }
+/* reviews */
 #reviews .quote {
   display: none;
+}
+/* time */
+#time .wrapper {
+  padding: 40px;
+  justify-content: flex-start;
 }
 
 /* TABLETS, LAPTOPS */
 
 @media screen and (min-width: 641px){
-  .wrapper {
+  #navigation_bar .wrapper {
     flex-wrap: nowrap;
   }
   #navigation_bar {
-    height: 80px;
+    height: 105px;
+    -webkit-box-shadow: 5px 5px 39px -5px rgba(201,201,201,1);
+    -moz-box-shadow: 5px 5px 39px -5px rgba(201,201,201,1);
+    box-shadow: 5px 5px 39px -5px rgba(201,201,201,1);
   }
   #navigation_bar label {
     display: none;
   }
   #nav1, #nav2 {
-    display: inline-flex;
     align-self: flex-end;
     max-height: 100px;
-    padding-bottom: 10px;
-    justify-content: space-evenly;
     flex-direction: row;
+    padding-bottom: 10px;
   }
   #nav1 {
     order: 1;
   }
   #brand {
     order: 2;
-    margin-top: 45px;
+    align-self: flex-start;
   }
   #nav2 {
     order: 3;
@@ -484,24 +513,51 @@ content: "\f00d";
     opacity: 1;
     margin-bottom: 0;
   }
-  .shrink {
-    max-height: 100px;
+  #logo img {
+    height: 140px;
   }
+  .shrink_logo {
+    height: 110px !important;
+  }
+  /* slider */
+  #slider_count {
+    left: 46%;
+  }
+  #slider img {
+    margin-left: 0;
+  }
+  /* combos */
   .dashed_border_right {
     border-right: 2px dashed black;
   }
   .third {
     border-bottom: 0;
   }
+  /* reviews */
   #reviews .wrapper {
     flex-direction: column;
-  }
-  footer .wrapper {
-    justify-content: space-between;
   }
   #reviews .quote {
     display: block;
     font-size: 60px;
     padding: 30px;
+  }
+  /* time */
+  #time .wrapper {
+    padding: 20px;
+    justify-content: space-around;
+  }
+  /* footer */
+  footer .wrapper {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 630px) and (max-width: 850px) {
+  .dashed_border_right {
+    border-right: none;
+  }
+  .dashed_border_bottom {
+    border-bottom: 2px dashed black;
   }
 }

@@ -18,18 +18,18 @@
     </head>
     <body>
       <section id="navigation_bar">
-        <div class="wrapper flex flex_row">
+        <div class="wrapper wrap flex flex_row">
           <input type="checkbox" name="menu" id="show_menu">
           <label for="show_menu"></label>
           <div id="brand" class="justify_center">
             <a id="logo" href="#"><img src="img/logo_def.png" alt="Ranelagh Take Away logo"></img></a>
           </div>
-          <nav id="nav1">
+          <nav id="nav1" class="flex justify_around">
             <a href="#">HOME</a>
             <!-- <a href="#about">ABOUT</a> -->
             <a href="#map">CONTACT</a>
           </nav>
-          <nav id="nav2">
+          <nav id="nav2" class="flex justify_around">
             <a href="#menu">MENU</a>
             <a id="order_online" href="https://deliveroo.ie/" target="_blank">ORDER ONLINE</a>
           </nav>
@@ -37,101 +37,102 @@
       </section>
       <section id="slider">
         <div class="slide">
-            <div class="wrapper flex justify_center">
+            <div class="wrapper wrap flex justify_center">
               <div class="adv flex_column">
                 <h1>FISH AND CHIPS</h1>
                 <p>Delicious Cod Fish and Cripsy Fries</p>
-                <a class="fish" href="https://deliveroo.ie/" type="button" target="_blank">BUY IT</a>
+                <a class="fish_neg" href="https://deliveroo.ie/" type="button" target="_blank">BUY IT</a>
               </div>
             </div>
             <img class="fade" src="img/fish&chips_1800.jpg">
         </div>
         <div class="slide">
-          <div class="wrapper flex justify_center">
+          <div class="wrapper wrap flex justify_center">
             <div class="adv flex_column">
               <h1>DONER KEBAB</h1>
               <p>Oriental taste for a yummy dinner!</p>
-              <a class="meat" href="https://deliveroo.ie/" type="button" target="_blank">BUY IT</a>
+              <a class="meat_neg" href="https://deliveroo.ie/" type="button" target="_blank">BUY IT</a>
             </div>
           </div>
           <img class="fade" src="img/kebab3.jpg">
         </div>
         <div class="slide">
-          <div class="wrapper flex justify_center">
+          <div class="wrapper wrap flex justify_center">
             <div class="adv flex_column">
               <h1>BEST FRIES!</h1>
               <p>A huge selection of your favourite fries</p>
-              <a class="meat" href="https://deliveroo.ie/" type="button" target="_blank">BUY IT</a>
+              <a class="meat_neg" href="https://deliveroo.ie/" type="button" target="_blank">BUY IT</a>
             </div>
           </div>
           <img class="fade" src="img/fries.jpg">
         </div>
         <a href="#0" class="prev" onclick="moveSlide(-1)"></a>
         <a href="#0" class="next" onclick="moveSlide(1)"></a>
-        <!-- <div class="wrapper">
+        <div id="slider_count" class="flex">
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
-        </div> -->
+        </div>
       </section>
 
       <section id="combos">
-        <!-- <div class="mask maskBottom"> -->
           <div class="combos_title">
-            <div class="wrapper flex flex_row justify_center">
-                <h2><span>THE</span> COMBOS</h2>
+            <div class="flex wrapper wrap flex_row justify_center">
+                <h2 class="flex align_center"><span>THE</span> COMBOS</h2>
             </div>
           </div>
-          <div class="wrapper flex flex_row justify_center">
+          <div class="wrapper wrap flex flex_row justify_center">
             <div class="food_thumb dashed_border_bottom dashed_border_right">
               <figure>
-                <h3>SEA SAVOR</h3>
+                <h3 class="fish">SEA SAVOR</h3>
                 <img src="img/sea_savour.jpg" alt="">
-                <figcaption class="fish">Fresh cod fillet, fried in a crispy breadcrum coat
+                <figcaption class="fish_neg">Fresh cod fillet, fried in a crispy breadcrum coat
                   <br />+ Thick fries
                   <br />+ Can of 33cl
-                  <span class="price">€9.90</span>
+                  <span class="price">&euro; 9.90</span>
                 </figcaption>
               </figure>
             </div>
             <div class="food_thumb dashed_border_bottom">
               <figure>
-                <h3>LAZY DINNER</h3>
-                <img src="img/sea_savour.jpg" alt="">
-                <figcaption class="meat">Fresh cod fillet, fried in a crispy breadcrum coat
+                <h3 class="meat">LAZY DINNER</h3>
+                <img src="img/lazy_dinner.jpg" alt="">
+                <figcaption class="meat_neg">Fresh cod fillet, fried in a crispy breadcrum coat
                   <br />+ Thick fries
                   <br />+ Can of 33cl
-                  <span class="price">€9.90</span>
+                  <span class="price">&euro; 9.90</span>
                 </figcaption>
               </figure>
             </div>
             <div class="food_thumb dashed_border_bottom dashed_border_right third">
               <figure>
-                <h3>ORIENTAL TASTE</h3>
-                <img src="img/sea_savour.jpg" alt="">
-                <figcaption class="meat">Fresh cod fillet, fried in a crispy breadcrum coat
+                <h3 class="meat">ORIENTAL TASTE</h3>
+                <img src="img/oriental_taste.jpg" alt="">
+                <figcaption class="meat_neg">Turkey kebab with lattuce, tomatoes, cucumber, red onion
                   <br />+ Thick fries
                   <br />+ Can of 33cl
-                  <span class="price">€9.90</span>
+                  <span class="price">&euro; 9.90</span>
                 </figcaption>
               </figure>
             </div>
             <div class="food_thumb">
               <figure>
-                <h3>SEA SAVOR</h3>
-                <img src="img/sea_savour.jpg" alt="">
-                <figcaption class="meat">Fresh cod fillet, fried in a crispy breadcrum coat
-                  <br />+ Thick fries
+                <h3 class="meat">FRIES PARTY</h3>
+                <img src="img/fries_party.jpg" alt="">
+                <figcaption class="meat_neg">Chicken wings and onion rings
+                  <br />+ Thin fries + Thick fries
                   <br />+ Can of 33cl
-                  <span class="price">€9.90</span>
+                  <span class="price">&euro; 9.90</span>
                 </figcaption>
               </figure>
             </div>
           </div>
-          <!-- </div> -->
       </section>
+      <div class="mask maskBottom">
+        <div class="wrapper wrap flex"></div>
+      </div>
       <section id="reviews">
-        <div class="wrapper flex flex_row justify_center align_center">
+        <div class="wrapper wrap flex flex_row justify_center align_center">
           <h2>They say of our food..</h2>
           <div class="flex flex_row nowrap align_center">
             <span class="quote"><i class="fas fa-quote-left"></i></span>
@@ -144,13 +145,13 @@
         <div class="mask maskTop">
           <div class="mapouter">
             <div class="gmap_canvas">
-              <iframe width="50%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Fields%20Terrace%2C%208%2C%20Charleston%20Rd%2C%20The%20Triangle%2C%20Dublin%206&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Fields%20Terrace%2C%208%2C%20Charleston%20Rd%2C%20The%20Triangle%2C%20Dublin%206&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div>
           </div>
         </div>
       </section>
       <section id="time">
-        <div class="wrapper flex flex_row justify_evenly">
+        <div class="wrapper wrap flex flex_row">
           <div>
             <h5 class="margin_basic">ADDRESS</h5>
             <p class="margin_basic">Fields Terrace
@@ -177,8 +178,8 @@
               <li>17:00 - 1:00</li>
               <li>17:00 - 1:00</li>
               <li>17:00 - 1:00</li>
-              <li>17:00 - 1:00</li>
-              <li>17:00 - 1:00</li>
+              <li>17:00 - 2:00</li>
+              <li>17:00 - 2:00</li>
               <li>17:00 - 1:00</li>
             </ul>
           </div>
@@ -186,7 +187,7 @@
         </div>
       </section>
       <section id="social">
-        <div class="wrapper flex flex_column align_center dashed_border_bottom">
+        <div class="wrapper wrap flex flex_column align_center dashed_border_bottom">
           <p>Follow us</p>
           <div class="margin_basic margin_top_none">
             <a id="facebook" class="social_btn" href="https://www.facebook.com/">
@@ -199,7 +200,7 @@
         </div>
       </section>
       <footer>
-        <div class="wrapper flex flex_row justify_evenly">
+        <div class="wrapper wrap flex flex_row justify_around">
           <p><a href="#">Allergens</a> | <a href="#">Privacy policy</a></p>
           <p><i class="far fa-copyright"></i>Ranelagh Takeaway - All right reserve</p>
         </div>
@@ -207,16 +208,15 @@
 
       <script>
 
+      // smooth shrink of navigation bar and logo
+
       $(document).on("scroll", function(){
-		          $("#navigation_bar, #logo, #logo img").toggleClass("shrink", $(this).scrollTop() > $('#navigation_bar').height());
-               $("#navigation_bar label").toggleClass("changeMargin", $(this).scrollTop() > $('#navigation_bar').height());
-            /*  $("#navigation_bar label").css("margin","15px 40px");
-		       }
-		         else {
-			         $("#navigation_bar, #logo").css("max-height","200px");
-               $("#navigation_bar label").css("margin","40px");
-		       }*/
+		          $("#navigation_bar").toggleClass("shrink", $(this).scrollTop() > $('#navigation_bar').height());
+              $("#logo, #logo img").toggleClass("shrink_logo", $(this).scrollTop() > $('#navigation_bar').height())
+              $("#navigation_bar label").toggleClass("changeMargin", $(this).scrollTop() > $('#navigation_bar').height());
 	    });
+
+      // slider movement
 
       var slideIndex = 1;
       showSlides(slideIndex);
@@ -242,7 +242,7 @@
         }
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
-}
+      }
 
       </script>
     </body>
